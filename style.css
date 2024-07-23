@@ -1,0 +1,381 @@
+/* 
+/* Selectores */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #050B0E;
+    color: #ECECEC;
+    font-family: 'Chivo', sans-serif;
+}
+
+footer{
+    height: 1em;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    
+}
+
+
+footer ul{
+    display: inline-block;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:any-link{
+    color:white;
+}
+
+a:-webkit-any-link{
+    color:white;
+}
+
+a:-moz-any-link{
+    color:white;
+}
+
+a:hover{
+    color: #D9D9D9;
+}
+
+/* Selectores IDs y Class */
+
+
+/* Inicio */
+/* Fondo de inicio */
+#video-background{
+    width: 100%;
+    position: relative;
+    height: 60em;
+    overflow: hidden;
+}
+
+#video-background video{
+    position:absolute;
+    top: 0;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Menu hamburguesa desplegable */
+
+.nav-bar{
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;  
+    background-color: transparent;
+    z-index: 1;
+}
+.nav-bar button{
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height:auto;
+    text-align:start;
+}
+.nav-bar i{
+    font-size: 50px;
+    color: white;
+    visibility: visible;
+}
+.nav-bar i:hover{
+    color: rgb(175, 175, 175);
+    animation-delay: 0.5s;
+}
+
+.nav-bar ul{
+    font-family: 'Chivo', sans-serif;
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+    transition: visibility 0s linear;
+    color: #050B0E;
+    
+}
+
+.nav-bar li{
+    font-size: 20px;
+    padding-top: 40px;
+    text-align: left;
+    width: auto;
+}
+
+button:hover ul{
+    visibility:visible;
+    color: rgb(206, 206, 206);
+    transition-delay: 0.2s;
+}
+
+/* Boton ingresar */
+
+
+.ingresar{
+    border-radius: 10px;
+    background-color: transparent;
+    float: inline-end;
+    margin-top: 70px;
+    margin-right: 50px;
+}
+
+.ingresar button{
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+}
+
+.ingresar button:hover{
+    background-color: rgba(255, 255, 255, 0.114);
+}
+
+.ingresar button:active{
+    transform: scale(.9);
+}
+
+/* Logo empresarial */
+
+#logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#logo h1{
+    font-size: 70px;
+    
+}
+
+#logo h2{
+    margin-top: 50px;
+    
+}
+
+/* Animación barra parpnadeante */
+
+@keyframes animacion {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+#bar-log{
+    animation: animacion 1s linear infinite;
+    font-size: 50px;
+}
+
+/* Class seccion */
+
+.seccion{
+    padding: 30px 100px 30px 100px;
+}
+/* BLoque de Información */
+
+#info{
+    background-color: #050B0E;
+    height: 800px;
+    padding: 40px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/* Foto de presentación */
+
+#container-img{
+    height: 500px;
+    width: 400px;
+    margin-left: 200px;
+}
+#container-img img{
+    filter: grayscale(60%);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bloque de texto acompañando a la foto */
+
+#container-text{
+    margin: 20px 150px 20px 40px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 25px;
+
+}
+#container-text h3{
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+#container-text p{
+    padding-top: 20px;
+    text-wrap:wrap;
+}
+
+/* Bloque de la sección de planes de alojamiento */
+#plan{
+    background-color: #cedfe9;
+    color: #050B0E;
+    width: auto;
+    height: 100%;
+}
+
+/* Texto introducción a los planes */
+
+.text-plan h2{
+    text-align: center;
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Orbitron',sans-serif;
+    color: #076990;
+}
+
+/* Contenedor de los planes */
+
+
+.container-planes{
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 10px;
+    
+    
+}
+.plan-info .antes{
+    text-decoration:line-through;
+}
+
+.plan-info{
+    background-color: whitesmoke;
+    border: 3px solid #1c85ae;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 500px;
+    
+}
+.plan-info ul{
+    margin-top: 20px;
+    list-style: none;
+    text-align:left;
+}
+.plan-info li{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.plan-info h3{
+    margin-top: 20px;
+    font-size: 25px
+}
+.plan-info h4{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.plan-info p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.plan-info #ahorra{
+    margin-left: 10px;
+    background-color: #AB94F1;
+    padding: 10px 8px;
+    border-radius: 20px;
+    color: white;
+}
+.plan-info button{
+    margin-bottom: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(90deg, rgba(233,236,236,1) 0%, rgba(128,127,125,1) 100%);
+    
+}
+
+.plan-info button:hover{
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.plan-info .barra{
+    margin: 0 5px 5px 0;
+    border:  1px solid #AB94F1;
+}
+
+#premium h4{
+    color: #673DE6;
+}
+#business h4{
+    color: #FC5185;
+}
+
+/* Soporte tecnico */
+
+#form{
+    background-color: #673DE6;
+    color: #050B0E;
+}
+
+
+.itemform{
+    display: grid;
+    grid-template-columns: 150px 350px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.itemform label{
+    font-weight: 700;
+}
+
+.itemform input, .itemform textarea{
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+input[type="submit"]{
+    background-color: #222;
+    border: 1px solid #222;
+    color: white;
+    padding: 10px;
+    grid-column: 2/3;
+    justify-self: end;
+}
+
+/* Responsive */
+@media (min-width: 300px) {
+    #video-background{
+        min-width: 38em;
+    }
+}
+
+/* @media (max-width: 480px) {
+} */ 

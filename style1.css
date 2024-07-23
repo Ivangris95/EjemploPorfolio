@@ -1,0 +1,402 @@
+/* Reset general */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Selectores */
+body {
+    background-color: #050B0E;
+    color: #ECECEC;
+    font-family: 'Chivo', sans-serif;
+    line-height: 1.6;
+}
+
+footer {
+    height: auto;
+    padding: 2em 1em 1.5em;
+    text-align: center;
+}
+
+footer ul {
+    display: inline-block;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:any-link,
+a:-webkit-any-link,
+a:-moz-any-link {
+    color: white;
+}
+
+a:hover {
+    color: #D9D9D9;
+}
+
+/* Fondo de inicio */
+#video-background {
+    width: 100%;
+    position: relative;
+    height: 60em;
+    overflow: hidden;
+}
+
+#video-background video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Menu hamburguesa desplegable */
+.nav-bar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.nav-bar button {
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+    text-align: start;
+}
+
+.nav-bar i {
+    font-size: 30px;
+    color: white;
+}
+
+.nav-bar ul {
+    font-family: 'Chivo', sans-serif;
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+    transition: visibility 0s linear;
+    color: #050B0E;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar li {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: left;
+    width: auto;
+}
+
+.nav-bar i:hover {
+    color: rgb(175, 175, 175);
+}
+
+
+button:hover ul {
+    visibility: visible;
+}
+
+/* Boton ingresar */
+.ingresar {
+    border-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.ingresar button {
+    background-color: transparent;
+    width: 5.8em;
+    height: 2em;
+    font-size: 100%;
+    color: white;
+    border: 2px solid rgba(250, 250, 250, .8);
+    border-radius: 9px;
+}
+
+.ingresar button:hover {
+    background-color: rgba(255, 255, 255, 0.114);
+}
+
+.ingresar button:active {
+    transform: scale(.9);
+}
+
+/* Logo empresarial */
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#logo h1 {
+    font-size: 3em;
+}
+
+#logo h2 {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+/* Animación barra parpadeante */
+@keyframes animacion {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+#bar-log {
+    animation: animacion 1s linear infinite;
+    font-size: .8em;
+}
+
+/* Secciones */
+.seccion {
+    padding: 2em;
+}
+
+#info {
+    background-color: #050B0E;
+    padding: 2em;
+    display: grid;
+    grid-template-columns:repeat(2 1fr);
+    gap: .5em;
+    /* align-items: ; */
+    /* align-content: center; */
+}
+
+#container-img {
+    width: 50%;
+    margin: 0 20%;
+    
+}
+
+#container-img img {
+    filter: grayscale(20%);
+    max-width: 80%;
+    height: auto;
+    
+    
+}
+
+#container-text {
+    font-family: 'Chivo', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 20%;  
+}
+
+#container-text h3 {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+#container-text p {
+    margin-top: 1em;
+}
+
+/* Sección de planes */
+#plan {
+    background-color: #cedfe9;
+    color: #050B0E;
+    padding: 2em;
+    
+}
+
+.text-plan h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    padding-bottom: 2em;
+    padding-top: 1em;
+    color: #076990;
+}
+
+.container-planes {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.plan-info {
+    background-color: whitesmoke;
+    border: 3px solid #1c85ae;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 2em;
+    text-align: center;
+}
+
+.plan-info ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.plan-info li {
+    margin: 1em 0;
+}
+
+.plan-info h3 {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.plan-info h4 {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.plan-info p {
+    margin: 1em 0;
+}
+
+.plan-info #ahorra {
+    background-color: #AB94F1;
+    padding: 0.5em;
+    border-radius: 20px;
+    color: white;
+}
+
+.plan-info button {
+    margin-bottom: 1em;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(90deg, rgba(233,236,236,1) 0%, rgba(128,127,125,1) 100%);
+}
+
+/* Animación colorida del boton */
+.plan-info button:hover {
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+#premium h4 {
+    color: #673DE6;
+}
+
+#business h4 {
+    color: #FC5185;
+}
+
+.antes{
+    text-decoration: line-through;
+    margin-right: 1em;
+}
+
+/* Soporte técnico */
+#form {
+    background-image: url(../ProyectoFinal/img/formimgV2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* object-fit: cover; */
+    font-family: 'Orbitron';
+    color: white;
+    padding: 2em;
+
+}
+
+#form h2, #form h3{
+    font-size: 3em;
+    font-weight: 800;
+    margin-left: 2em;
+}
+
+#form h3{
+    margin-bottom: 20px;
+}
+
+.itemform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+.itemform label {
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+
+
+.itemform input, .itemform textarea {
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    width: 50%;
+    
+}
+
+input[type="submit"] {
+    font-weight: 800;
+    font-size: 1em;
+    background-color: #222;
+    border: 1px solid #222;
+    color: white;
+    padding: 0.5em;
+    margin-top: 1em;
+    align-self: center;
+    max-width: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    #info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container-planes {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .plan-info {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #logo h1 {
+        font-size: 4em;
+    }
+
+    #logo h2 {
+        font-size: 2em;
+    }
+
+    .plan-info {
+        width: 30%;
+    }
+}
